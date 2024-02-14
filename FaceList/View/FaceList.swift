@@ -20,7 +20,7 @@ struct FaceList: View {
                     List {
                         ForEach(viewModel.faces) { face in
                             NavigationLink {
-                                Text(face.fullName)
+                                FaceDetails(face: face)
                             } label: {
                                ListRow(face: face)
                             }

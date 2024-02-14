@@ -16,6 +16,12 @@
 		8B70BD662B7BB22400B14C2D /* FaceList.ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B70BD652B7BB22400B14C2D /* FaceList.ViewModel.swift */; };
 		8B70BD692B7BB80700B14C2D /* ListRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B70BD682B7BB80700B14C2D /* ListRow.swift */; };
 		8B70BD6B2B7BB87000B14C2D /* Avatar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B70BD6A2B7BB87000B14C2D /* Avatar.swift */; };
+		8BAB28F82B7D1C750033D7D2 /* FaceDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BAB28F72B7D1C750033D7D2 /* FaceDetails.swift */; };
+		8BAB28FB2B7D1DAE0033D7D2 /* ColorKit in Frameworks */ = {isa = PBXBuildFile; productRef = 8BAB28FA2B7D1DAE0033D7D2 /* ColorKit */; };
+		8BAB28FD2B7D1E1B0033D7D2 /* AnimatedBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BAB28FC2B7D1E1B0033D7D2 /* AnimatedBackground.swift */; };
+		8BAB28FF2B7D1E570033D7D2 /* WithAnimatedBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BAB28FE2B7D1E570033D7D2 /* WithAnimatedBackground.swift */; };
+		8BAB29022B7D207B0033D7D2 /* withAnimatedBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BAB29012B7D207B0033D7D2 /* withAnimatedBackground.swift */; };
+		8BAB29042B7D2F890033D7D2 /* DetailsRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BAB29032B7D2F890033D7D2 /* DetailsRow.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +35,11 @@
 		8B70BD652B7BB22400B14C2D /* FaceList.ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaceList.ViewModel.swift; sourceTree = "<group>"; };
 		8B70BD682B7BB80700B14C2D /* ListRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListRow.swift; sourceTree = "<group>"; };
 		8B70BD6A2B7BB87000B14C2D /* Avatar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Avatar.swift; sourceTree = "<group>"; };
+		8BAB28F72B7D1C750033D7D2 /* FaceDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaceDetails.swift; sourceTree = "<group>"; };
+		8BAB28FC2B7D1E1B0033D7D2 /* AnimatedBackground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimatedBackground.swift; sourceTree = "<group>"; };
+		8BAB28FE2B7D1E570033D7D2 /* WithAnimatedBackground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WithAnimatedBackground.swift; sourceTree = "<group>"; };
+		8BAB29012B7D207B0033D7D2 /* withAnimatedBackground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = withAnimatedBackground.swift; sourceTree = "<group>"; };
+		8BAB29032B7D2F890033D7D2 /* DetailsRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsRow.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -36,6 +47,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8BAB28FB2B7D1DAE0033D7D2 /* ColorKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -61,6 +73,7 @@
 		8B359F312B7B735000FDB70E /* FaceList */ = {
 			isa = PBXGroup;
 			children = (
+				8BAB29002B7D1ED90033D7D2 /* extensions */,
 				8B70BD672B7BB7F300B14C2D /* components */,
 				8B70BD642B7BB1F800B14C2D /* ViewModel */,
 				8B359F432B7B73D400FDB70E /* Data */,
@@ -85,6 +98,7 @@
 			isa = PBXGroup;
 			children = (
 				8B359F412B7B73C200FDB70E /* FaceList.swift */,
+				8BAB28F72B7D1C750033D7D2 /* FaceDetails.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -110,8 +124,19 @@
 			children = (
 				8B70BD682B7BB80700B14C2D /* ListRow.swift */,
 				8B70BD6A2B7BB87000B14C2D /* Avatar.swift */,
+				8BAB28FC2B7D1E1B0033D7D2 /* AnimatedBackground.swift */,
+				8BAB28FE2B7D1E570033D7D2 /* WithAnimatedBackground.swift */,
+				8BAB29032B7D2F890033D7D2 /* DetailsRow.swift */,
 			);
 			path = components;
+			sourceTree = "<group>";
+		};
+		8BAB29002B7D1ED90033D7D2 /* extensions */ = {
+			isa = PBXGroup;
+			children = (
+				8BAB29012B7D207B0033D7D2 /* withAnimatedBackground.swift */,
+			);
+			path = extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -130,6 +155,9 @@
 			dependencies = (
 			);
 			name = FaceList;
+			packageProductDependencies = (
+				8BAB28FA2B7D1DAE0033D7D2 /* ColorKit */,
+			);
 			productName = FaceList;
 			productReference = 8B359F2F2B7B735000FDB70E /* FaceList.app */;
 			productType = "com.apple.product-type.application";
@@ -158,6 +186,9 @@
 				Base,
 			);
 			mainGroup = 8B359F262B7B735000FDB70E;
+			packageReferences = (
+				8BAB28F92B7D1DAE0033D7D2 /* XCRemoteSwiftPackageReference "ColorKit" */,
+			);
 			productRefGroup = 8B359F302B7B735000FDB70E /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -185,6 +216,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				8B359F452B7B73F600FDB70E /* Face.swift in Sources */,
+				8BAB28FD2B7D1E1B0033D7D2 /* AnimatedBackground.swift in Sources */,
+				8BAB29022B7D207B0033D7D2 /* withAnimatedBackground.swift in Sources */,
+				8BAB28FF2B7D1E570033D7D2 /* WithAnimatedBackground.swift in Sources */,
+				8BAB28F82B7D1C750033D7D2 /* FaceDetails.swift in Sources */,
+				8BAB29042B7D2F890033D7D2 /* DetailsRow.swift in Sources */,
 				8B359F352B7B735000FDB70E /* ContentView.swift in Sources */,
 				8B70BD692B7BB80700B14C2D /* ListRow.swift in Sources */,
 				8B359F332B7B735000FDB70E /* FaceListApp.swift in Sources */,
@@ -394,6 +430,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		8BAB28F92B7D1DAE0033D7D2 /* XCRemoteSwiftPackageReference "ColorKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Boris-Em/ColorKit";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		8BAB28FA2B7D1DAE0033D7D2 /* ColorKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8BAB28F92B7D1DAE0033D7D2 /* XCRemoteSwiftPackageReference "ColorKit" */;
+			productName = ColorKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 8B359F272B7B735000FDB70E /* Project object */;
 }
