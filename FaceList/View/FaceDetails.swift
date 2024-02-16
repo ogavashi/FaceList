@@ -9,12 +9,14 @@ import SwiftUI
 
 struct FaceDetails: View {
     let face: Face
+    @State private var isVisible: Bool = false
+    let updateFace: (Face) -> Void
     
     var body: some View {
         NavigationStack {
             ScrollView {
                 VStack {
-                    Avatar(face: face, size: 300)
+                    Avatar(face: face, image: nil, size: 300)
                         .padding()
                     
                     VStack {
@@ -28,8 +30,13 @@ struct FaceDetails: View {
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {
                 ToolbarItem(placement: .confirmationAction) {
-                    Button("Edit", action: {})
+                    Button("Edit", action: {
+                        isVisible = true
+                    })
                 }
+            }
+            .sheet(isPresented: $isVisible) {
+                EditFace(face: face, addFace: updateFace)
             }
             .withAnimatedBackground(face: face)
         }
@@ -37,5 +44,5 @@ struct FaceDetails: View {
 }
 
 #Preview {
-    FaceDetails(face: Face.example)
+    FaceDetails(face: Face.example,updateFace: {_ in })
 }

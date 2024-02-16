@@ -22,6 +22,8 @@
 		8BAB28FF2B7D1E570033D7D2 /* WithAnimatedBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BAB28FE2B7D1E570033D7D2 /* WithAnimatedBackground.swift */; };
 		8BAB29022B7D207B0033D7D2 /* withAnimatedBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BAB29012B7D207B0033D7D2 /* withAnimatedBackground.swift */; };
 		8BAB29042B7D2F890033D7D2 /* DetailsRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BAB29032B7D2F890033D7D2 /* DetailsRow.swift */; };
+		8BDA26242B7F809100C6C6F4 /* EditFace.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BDA26232B7F809100C6C6F4 /* EditFace.swift */; };
+		8BDA26262B7F810000C6C6F4 /* EditFace.ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BDA26252B7F810000C6C6F4 /* EditFace.ViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +42,8 @@
 		8BAB28FE2B7D1E570033D7D2 /* WithAnimatedBackground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WithAnimatedBackground.swift; sourceTree = "<group>"; };
 		8BAB29012B7D207B0033D7D2 /* withAnimatedBackground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = withAnimatedBackground.swift; sourceTree = "<group>"; };
 		8BAB29032B7D2F890033D7D2 /* DetailsRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsRow.swift; sourceTree = "<group>"; };
+		8BDA26232B7F809100C6C6F4 /* EditFace.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditFace.swift; sourceTree = "<group>"; };
+		8BDA26252B7F810000C6C6F4 /* EditFace.ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditFace.ViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +103,7 @@
 			children = (
 				8B359F412B7B73C200FDB70E /* FaceList.swift */,
 				8BAB28F72B7D1C750033D7D2 /* FaceDetails.swift */,
+				8BDA26232B7F809100C6C6F4 /* EditFace.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -115,6 +120,7 @@
 			isa = PBXGroup;
 			children = (
 				8B70BD652B7BB22400B14C2D /* FaceList.ViewModel.swift */,
+				8BDA26252B7F810000C6C6F4 /* EditFace.ViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -217,6 +223,7 @@
 			files = (
 				8B359F452B7B73F600FDB70E /* Face.swift in Sources */,
 				8BAB28FD2B7D1E1B0033D7D2 /* AnimatedBackground.swift in Sources */,
+				8BDA26242B7F809100C6C6F4 /* EditFace.swift in Sources */,
 				8BAB29022B7D207B0033D7D2 /* withAnimatedBackground.swift in Sources */,
 				8BAB28FF2B7D1E570033D7D2 /* WithAnimatedBackground.swift in Sources */,
 				8BAB28F82B7D1C750033D7D2 /* FaceDetails.swift in Sources */,
@@ -224,6 +231,7 @@
 				8B359F352B7B735000FDB70E /* ContentView.swift in Sources */,
 				8B70BD692B7BB80700B14C2D /* ListRow.swift in Sources */,
 				8B359F332B7B735000FDB70E /* FaceListApp.swift in Sources */,
+				8BDA26262B7F810000C6C6F4 /* EditFace.ViewModel.swift in Sources */,
 				8B70BD6B2B7BB87000B14C2D /* Avatar.swift in Sources */,
 				8B70BD662B7BB22400B14C2D /* FaceList.ViewModel.swift in Sources */,
 				8B359F422B7B73C200FDB70E /* FaceList.swift in Sources */,

@@ -8,12 +8,25 @@
 import SwiftUI
 
 struct Avatar: View {
-    let face: Face
+    let face: Face?
+    let image: Image?
     let size: CGFloat
+    
+    var properImage: Image? {
+        if let face = face {
+            return face.getImage
+        }
+        
+        if let image = image {
+            return image
+        }
+        
+        return nil
+    }
     
     var body: some View {
         ZStack {
-            if let image = face.getImage {
+            if let image = properImage {
                 image
                     .resizable()
                     .aspectRatio(contentMode: .fill)
@@ -27,7 +40,7 @@ struct Avatar: View {
                     .shadow(radius: 10)
             } else {
                 Circle()
-                    .fill(.primary)
+                    .fill(.gray)
                     .frame(width: size, height: size)
                 Text(getTitle())
                     .foregroundStyle(.blue)
@@ -38,10 +51,10 @@ struct Avatar: View {
     
     
     func getTitle() -> String {
-        return face.fullName.components(separatedBy: " ").map { $0.prefix(1) }.joined().uppercased()
+        return face?.fullName.components(separatedBy: " ").map { $0.prefix(1) }.joined().uppercased() ?? ""
     }
 }
 
 #Preview {
-    Avatar(face: Face.example, size: 200)
+    Avatar(face: Face.example, image: nil, size: 200)
 }

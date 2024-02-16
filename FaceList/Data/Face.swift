@@ -9,11 +9,11 @@ import Foundation
 import UIKit
 import SwiftUI
 
-struct Face: Identifiable, Codable, Equatable, Comparable {
-    let id: UUID
-    let firstName: String
-    let lastName: String?
-    let imageData: Data?
+struct Face: Identifiable, Codable, Equatable, Comparable, Hashable {
+    var id: UUID
+    var firstName: String
+    var lastName: String?
+    var imageData: Data?
     
     var fullName: String {
         guard let lastName = lastName else {
@@ -43,7 +43,7 @@ struct Face: Identifiable, Codable, Equatable, Comparable {
     }
     
     static func ==(lhs: Face, rhs: Face) -> Bool {
-        lhs.fullName == rhs.fullName
+        lhs.id == rhs.id
     }
     
 #if DEBUG

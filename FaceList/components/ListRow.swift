@@ -12,7 +12,7 @@ struct ListRow: View {
     
     var body: some View {
         HStack(alignment: .center) {
-            Avatar(face: face, size: 50)
+            Avatar(face: face, image: nil, size: 50)
                 .padding(.trailing, 5)
             Text(face.fullName)
                 .bold()
